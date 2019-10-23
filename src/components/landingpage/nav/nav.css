@@ -1,0 +1,41 @@
+/* Nav */
+.navbar-light .navbar-nav .nav-link{
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2185D0;
+  margin: 0 15px 0 15px;
+  }
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #2185D0;
+    text-decoration: underline;
+}
+#mainNav{
+  position: absolute;
+}
+@media only screen and (min-width: 992px){
+  #mainNav {
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  #mainNav.is-fixed {
+    position: fixed;
+    top: -67px;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    border-bottom: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  #mainNav.is-visible {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
