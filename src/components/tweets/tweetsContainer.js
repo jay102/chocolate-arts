@@ -18,6 +18,11 @@ class TweetsContainer extends Component {
     const { name } = e.target;
     this.setState({ [name]: e.target.value })
   }
+  submitTweet = async (e) => {
+    e.preventDefault();
+    const { name, tweet } = this.state;
+    console.log(name, tweet)
+  }
   getTweets = async () => {
     const tweets = await tweetService.getalltweets();
     console.log(tweets)
@@ -59,7 +64,9 @@ class TweetsContainer extends Component {
       <Tweets
         alltweets={AllTweets}
         name={this.state.name}
-        tweet={this.state.tweet} />
+        tweet={this.state.tweet}
+        change={this.handleChange}
+        submit={this.submitTweet} />
     );
   }
 }
