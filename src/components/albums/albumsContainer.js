@@ -38,7 +38,8 @@ class AlbumsContainer extends Component {
     });
     return (
       <Albums
-        photos={AllAlbumsPhotos} />
+        photos={AllAlbumsPhotos}
+        id={this.props.match.params.id} />
     );
   }
 }

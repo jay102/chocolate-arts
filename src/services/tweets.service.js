@@ -6,8 +6,7 @@ export const tweetService = {
 };
 const baseUrl = "https://jsonplaceholder.typicode.com"
 function getalltweets() {
-  return fetch(`${baseUrl}/comments`).then(res => {
-  });
+  return fetch(`${baseUrl}/comments?_start=0&_limit=10`).then(res => res.json());
 }
 
 function createtweet(tweet) {
@@ -16,7 +15,7 @@ function createtweet(tweet) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(tweet)
   };
-  return fetch(`${baseUrl}/comments?_start=0&_limit=10`, requestOptions).then(res => res.json());
+  return fetch(`${baseUrl}/comments`, requestOptions).then(res => res.json());
 }
 
 function updatetweet({ tweet, id }) {
@@ -29,6 +28,10 @@ function updatetweet({ tweet, id }) {
 }
 
 function deletetweet(id) {
-  return fetch(`${baseUrl}/comments/${id}`);
+  const requestOptions = {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+  };
+  return fetch(`${baseUrl}/comments/${id}`, requestOptions);
 }
 

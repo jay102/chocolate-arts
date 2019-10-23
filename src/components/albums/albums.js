@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './albums.css'
 
 const Albumbs = (props) => {
@@ -26,7 +27,7 @@ const Albumbs = (props) => {
         <section className="jumbotron text-center">
           <div className="container">
             <h1 className="jumbotron-heading">Artist Name</h1>
-            <small><i className="fab fa-twitter" style={{ color: "blue" }}></i>tweets</small>
+            <Link to={`/artist/${props.id}/tweets`}><small><i className="fab fa-twitter" style={{ color: "blue" }}></i>tweets</small></Link>
           </div>
         </section>
 
