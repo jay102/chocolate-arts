@@ -1,8 +1,8 @@
-export const userService = {
+export const albumService = {
   getartistalbums,
   getalbumphotos
 };
-const baseUrl = "https://jsonplaceholder.typicode"
+const baseUrl = "https://jsonplaceholder.typicode.com"
 function getartistalbums() {
   return fetch(`${baseUrl}/albums`).then(res => {
   });

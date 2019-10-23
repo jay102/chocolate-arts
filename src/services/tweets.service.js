@@ -1,10 +1,10 @@
-export const userService = {
+export const tweetService = {
   getalltweets,
   createtweet,
   updatetweet,
   deletetweet
 };
-const baseUrl = "https://jsonplaceholder.typicode"
+const baseUrl = "https://jsonplaceholder.typicode.com"
 function getalltweets() {
   return fetch(`${baseUrl}/comments`).then(res => {
   });
