@@ -4,7 +4,7 @@ const Artists = (props) => {
   return (
     <div className="container">
       <h5 className="all-artists">ALL ARTISTS</h5>
-      <table className="table table-striped">
+      <table className="table ">
         <thead>
           <tr>
             <th>#</th>

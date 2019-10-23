@@ -16,7 +16,7 @@ function createtweet(tweet) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(tweet)
   };
-  return fetch(`${baseUrl}/comments`, requestOptions).then(res => res.json());
+  return fetch(`${baseUrl}/comments?_start=0&_limit=10`, requestOptions).then(res => res.json());
 }
 
 function updatetweet({ tweet, id }) {

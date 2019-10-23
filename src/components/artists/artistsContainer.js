@@ -29,7 +29,7 @@ class ArtistsContainer extends Component {
     const AllArtists = artists.map(artists => {
       return (
         <tbody key={artists.id}>
-          <tr>
+          <tr className="table-info">
             <td>{artists.id}</td>
             <td>{artists.name}</td>
             <td>{artists.email}</td>
