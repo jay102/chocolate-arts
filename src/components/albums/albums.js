@@ -26,7 +26,7 @@ const Albumbs = (props) => {
 
         <section className="jumbotron text-center">
           <div className="container">
-            <h1 className="jumbotron-heading">Artist Name</h1>
+            <h1 className="jumbotron-heading">Album</h1>
             <Link to={`/artist/${props.id}/tweets`}><small><i className="fab fa-twitter" style={{ color: "blue" }}></i>tweets</small></Link>
           </div>
         </section>

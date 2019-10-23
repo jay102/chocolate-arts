@@ -21,6 +21,10 @@ class TweetsContainer extends Component {
   submitTweet = async (e) => {
     e.preventDefault();
     const { name, tweet } = this.state;
+    const obj = {
+      name, tweet
+    }
+    tweetService.createtweet(obj)
     console.log(name, tweet)
   }
   getTweets = async () => {
