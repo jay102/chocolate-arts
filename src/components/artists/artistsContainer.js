@@ -34,7 +34,7 @@ class ArtistsContainer extends Component {
             <td>{artists.name}</td>
             <td>{artists.email}</td>
             <td style={{ fontSize: "0.72rem" }}>
-              <Link className="btn btn-primary" >View Albums</Link></td>
+              <Link className="btn btn-primary" to={`/albums/${artists.id}`} >View Albums</Link></td>
           </tr>
         </tbody>
       );
